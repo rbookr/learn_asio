@@ -1,3 +1,5 @@
+//来自知乎的一篇文章
+// [A thread pool with Boost.Asio - 知乎](https://zhuanlan.zhihu.com/p/87390640)
 #include "asio.hpp"
 #include <memory>
 

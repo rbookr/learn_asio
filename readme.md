@@ -17,7 +17,15 @@
 - [同步的时间server](./code/asio_tutorial_code/dayTime1/server.cpp)
 - [异步，类封装的时间server](./code/asio_tutorial_code/dayTime1/server.cpp)
 
-学会了
+## Echo 服务器
+
+学习自 [C++11 Examples echo](https://think-async.com/Asio/asio-1.18.2/doc/asio/examples/cpp11_examples.html#asio.examples.cpp11_examples.echo)
+
+## http 服务器
+
+学习自 [C++11 Examples http](https://think-async.com/Asio/asio-1.18.2/doc/asio/examples/cpp11_examples.html#asio.examples.cpp11_examples.http_server)
+
+## 学会了
  - 什么是socket
  - 要想使用socket，先要创建一个accpetor
    - acceptor 需要知道接收的ip有哪些，和在哪个端口上接收,这两个数据被封装在一个 endpoint 类中
@@ -46,11 +54,21 @@
   
   
 
-1. 首先创建一个没有孔的插座,显然server,client都要创建socket
-2. acceptor 在插座上打一个孔，然后等待，直到一条线连接到这个也上
+1. 首先创建一个有孔的插座,显然server,client都要创建socket
+2. acceptor是一种规则，他可以说明哪种ip，协议等限制 然后等待，直到一条线连接到这个也上
+    - 也给了socket的被连接的能力
 3. 有连接了，可以通过 wirte,read等函数来对 socket 进行通信
     - wirte(socket,buffer)
     - read(socket,buffer)
 5. 一个socket 应该不能打多个孔，只能打一个孔
 6. 想要多个孔，就建立多个socket
 ```
+
+
+## 学习自
+- [C++网络编程之ASIO(一) - 知乎](https://zhuanlan.zhihu.com/p/37590580) 
+- [C++网络编程之asio(二) - 知乎](https://zhuanlan.zhihu.com/p/39973955)
+- [C++网络编程之asio(三) - 知乎](https://zhuanlan.zhihu.com/p/46116528)
+- [C++网络编程之asio(四)——reactor模式与libcurl(原理可用于mysql api) - 知乎](https://zhuanlan.zhihu.com/p/51216945)
+- [C++网络编程之asio(五)——在asio中使用协程 - 知乎](https://zhuanlan.zhihu.com/p/58784652)
+- [A thread pool with Boost.Asio - 知乎](https://zhuanlan.zhihu.com/p/87390640)

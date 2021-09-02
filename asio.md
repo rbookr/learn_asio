@@ -49,3 +49,9 @@ asio有两种使用方式：synchronous，asynchronous
 [The Proactor Design Pattern: Concurrency Without Threads](https://think-async.com/Asio/asio-1.18.2/doc/asio/overview/core/async.html)
 
 ![](./images/proactor.png)
+
+## 参考资料
+
+- [Boost Asio要点概述（一）_guxch的专栏-CSDN博客_boost::asio](https://blog.csdn.net/guxch/article/details/83501443?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7Eessearch%7Evector-7.essearch_pc_relevant&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7Eessearch%7Evector-7.essearch_pc_relevant)
+- [Boost Asio要点概述（二）_guxch的专栏-CSDN博客](https://blog.csdn.net/guxch/article/details/83501665?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.essearch_pc_relevant&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.essearch_pc_relevant)
+[Boost Asio要点概述（三）_guxch的专栏-CSDN博客](https://blog.csdn.net/guxch/article/details/83509249?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.essearch_pc_relevant&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.essearch_pc_relevant)
