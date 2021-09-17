@@ -7,7 +7,9 @@ void print(const asio::error_code & ec,asio::steady_timer *t,int *count){
     if( *count < 5){
         printf("*count = %d\n",*count);
         ++(*count);
+        //修改了新的到期时间
         t->expires_at(t->expiry() + asio::chrono::seconds(1));
+        //= 传值补获，得到了原始的count的地址
         auto f= [=](const asio::error_code & ec){
                     //printf("hello\n");
                     //printf("&count = %llx\n",(int *)count);

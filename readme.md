@@ -8,7 +8,9 @@
 - [time1 延迟](./code/asio_tutorial_code/time1.cpp)
 - [time2 async 延迟](./code/asio_tutorial_code/time2.cpp)
 - [time3 async 延迟,循环五次](./code/asio_tutorial_code/time3.cpp)
+  - 原教程是用的boos::bind，我这里用了lambda来捕获想要引用的值
 - [time4 async 延迟,循环五次,async_handler 为类的成员函数](./code/asio_tutorial_code/time4.cpp)
+  - 原教程是用的boos::bind，我这里用了lambda来捕获this指针，简单了很多
 - [time5 asio::bind_executor(strand,xx),strand保证调用按顺序执行](./code/asio_tutorial_code/time5.cpp)
 
 ### 时间服务器

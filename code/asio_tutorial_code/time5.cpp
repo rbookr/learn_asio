@@ -1,3 +1,8 @@
+// asio保证 callback handlers 只会被在执行 io_context::run()的线程上执行
+// 因为单线程执行 io_context::run() 不能让callback handlers 同步执行
+//
+// 我们可以使用 线程池 来运行io_context::run,但是我也需要同步的方法，来访问一些线程安全的资源
+// 在同一个 strand 类中分发的 handler 只能一个接一个的执行
 #include <cstdio>
 #include <thread>
 #include <chrono>
@@ -12,7 +17,7 @@ class printer {
             cnt_(0)
         {
             timer1_.async_wait(
-                    asio::bind_executor(strand_,        //strand 保证 注册在此stran上的事件是一个一个执行的
+                    asio::bind_executor(strand_,        //strand 保证 注册在此strand上的事件是一个一个执行的
                         [this](const asio::error_code &ec){ this->print1(); } ));
             timer2_.async_wait(
                     asio::bind_executor(strand_,

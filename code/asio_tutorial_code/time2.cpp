@@ -1,3 +1,8 @@
+/* 
+ * 本程序证明 io.run 是一个循环
+ * 不停的从I/O execution context 尝试取
+ * 一但从I/O execution context 队列的东西被取完，io.run 就结束
+ * */
 #include <cstdio>
 #include <chrono>
 #include "asio.hpp"

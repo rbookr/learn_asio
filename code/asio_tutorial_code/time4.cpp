@@ -2,12 +2,15 @@
 #include <chrono>
 #include "asio.hpp"
 
+// printer 里封装了timer
 class printer{
     public:
         printer(asio::io_context &io)
-            :time_{io,std::chrono::seconds(1)},
-            count_{0}
+            :time_{io,std::chrono::seconds(1)}, //初始化
+            count_{0} //计数用
         {
+            //定义了一个异步操作
+            //捕获了this指针
             time_.async_wait([this](const asio::error_code & ec){
                         this->print();
                     });
@@ -27,7 +30,7 @@ class printer{
             }
         }
     private:
-        asio::steady_timer time_;
+        asio::steady_timer time_; //封装了timer
         int count_;
 };
 int main(){
